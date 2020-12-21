@@ -8,7 +8,7 @@ end
 def consolidate_cart(cart)
   checkout = []
   cart.each do |hash|
-    if find_item_by_name_in_collection(hash[:item], checkout) == nil
+    if !find_item_by_name_in_collection(hash[:item], checkout)
       checkout << hash
       checkout[hash][:count] = 1
     else
