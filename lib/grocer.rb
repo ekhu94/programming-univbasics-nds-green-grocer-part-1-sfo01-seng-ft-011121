@@ -13,7 +13,7 @@ def consolidate_cart(cart)
       hash[:count] = 1
       checkout.push(hash)
     else
-      return
+      return checkout
     end
   end
   checkout
