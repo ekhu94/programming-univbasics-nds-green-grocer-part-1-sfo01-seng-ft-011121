@@ -24,3 +24,5 @@ unconsolidated_cart = [
   {:item => "AVOCADO", :price => 3.00, :clearance => true },
   {:item => "KALE", :price => 3.00, :clearance => false}
 ]
+
+puts consolidate_cart(unconsolidated_cart)
