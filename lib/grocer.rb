@@ -1,3 +1,5 @@
+require 'pry'
+
 def find_item_by_name_in_collection(name, collection)
   collection.each do |hash|
     hash.each { |k, v| return hash if hash[:item] == name }
@@ -15,6 +17,7 @@ def consolidate_cart(cart)
       checkout[hash][:count] += 1
     end
   end
+  binding.pry
   checkout
 end
 
