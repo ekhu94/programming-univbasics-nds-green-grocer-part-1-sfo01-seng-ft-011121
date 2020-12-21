@@ -13,7 +13,7 @@ def consolidate_cart(cart)
       hash[:count] = 1
       checkout.push(hash)
     else
-      return checkout
+      
     end
   end
   checkout
@@ -25,4 +25,5 @@ unconsolidated_cart = [
   {:item => "KALE", :price => 3.00, :clearance => false}
 ]
 
-puts consolidate_cart(unconsolidated_cart)
+print consolidate_cart(unconsolidated_cart)
+puts
