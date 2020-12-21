@@ -7,12 +7,13 @@ end
 
 def consolidate_cart(cart)
   checkout = []
-  cart.each_with_index do |hash, i|
-    if find_item_by_name_in_collection(hash[:item], checkout) == nil
+  cart.each do |hash|
+    name = hash[:item]
+    if find_item_by_name_in_collection(name, checkout) == nil
       hash[:count] = 1
       checkout.push(hash)
     else
-      
+      return
     end
   end
   checkout
@@ -23,5 +24,3 @@ unconsolidated_cart = [
   {:item => "AVOCADO", :price => 3.00, :clearance => true },
   {:item => "KALE", :price => 3.00, :clearance => false}
 ]
- 
-puts consolidate_cart(unconsolidated_cart) 
