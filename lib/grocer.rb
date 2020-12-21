@@ -12,7 +12,7 @@ def consolidate_cart(cart)
       hash[:count] = 1
       checkout.push(hash)
     else
-      checkout[hash][:count] += 1
+      find_item_by_name_in_collection(name, collection)[:count] += 1
     end
   end
   checkout
